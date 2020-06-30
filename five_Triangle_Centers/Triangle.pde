@@ -68,9 +68,7 @@ class Triangle{
       line(0, b1, width, b1-width/ABm);//show perpendicular
       line(0, b2, width, b2-width/BCm);
     }
-    float x = (b2-b1)/(-1./ABm+1./BCm);
-    float y = -x/ABm + b1;
-    return new PVector(x, y);
+    return calcIntersect(-1./ABm, b1, -1./BCm, b2);
   }
   
   PVector[] getExC(){//based on this site https://math.stackexchange.com/questions/2885076/finding-the-excenter-of-a-triangle

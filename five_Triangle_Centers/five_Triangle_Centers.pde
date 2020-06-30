@@ -3,16 +3,16 @@ Triangle triangle;
 int dispType = 0;
 
 void setup() {
-  fullScreen();
-  //size(500, 500);
+  //fullScreen();
+  size(500, 500);
   float offx = (width-height)/2;
   wa = new Wheel(offx+height/3, height/3, height/12);
   wb = new Wheel(offx+height/3, height/3*2, height/12);
   wc = new Wheel(offx+height/3*2, height/3, height/12);
   triangle = new Triangle();
   strokeJoin(ROUND);
-  strokeWeight(10);
-  textSize(100);
+  strokeWeight(1);
+  textSize(20);
 }
 
 void draw() {
