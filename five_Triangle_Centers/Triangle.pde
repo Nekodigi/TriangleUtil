@@ -30,12 +30,12 @@ class Triangle{
   
   //calculate 5 center of triangle
   
-  //based on this cite https://brilliant.org/wiki/triangles-centroid/
+  //based on this site https://brilliant.org/wiki/triangles-centroid/
   PVector getCentroid(){//get center of gravity 
     return PVector.add(A, B).add(C).div(3);
   }
   
-  //based on this cite https://stackoverflow.com/questions/56224824/how-do-i-find-the-circumcenter-of-the-triangle-using-python-without-external-lib
+  //based on this site https://stackoverflow.com/questions/56224824/how-do-i-find-the-circumcenter-of-the-triangle-using-python-without-external-lib
   PVector getCircumC(){//get circum center with Radius (z is radius)
     float d = 2 * (A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y));
     float ux = ((A.x * A.x + A.y * A.y) * (B.y - C.y) + (B.x * B.x + B.y * B.y) * (C.y - A.y) + (C.x * C.x + C.y * C.y) * (A.y - B.y)) / d;
@@ -45,7 +45,7 @@ class Triangle{
     return cc;
   }
   
-  //based on this cite https://en.wikipedia.org/wiki/Incenter
+  //based on this site https://en.wikipedia.org/wiki/Incenter
   PVector getInC(){//get inner center 
     float a = PVector.dist(B, C);
     float b = PVector.dist(C, A);
@@ -58,7 +58,7 @@ class Triangle{
     return result;
   }
   
-  //based on this cite https://tutors.com/math-tutors/geometry-help/how-to-find-orthocenter-of-a-triangle#how-find-orthocenter-triangle
+  //based on this site https://tutors.com/math-tutors/geometry-help/how-to-find-orthocenter-of-a-triangle#how-find-orthocenter-triangle
   PVector getOrthoC(boolean visualize){//get ortho center 
     float ABm = calcSlope(A, B);
     float BCm = calcSlope(B, C);
@@ -73,7 +73,7 @@ class Triangle{
     return new PVector(x, y);
   }
   
-  PVector[] getExC(){//based on this cite https://math.stackexchange.com/questions/2885076/finding-the-excenter-of-a-triangle
+  PVector[] getExC(){//based on this site https://math.stackexchange.com/questions/2885076/finding-the-excenter-of-a-triangle
     float a = PVector.dist(B, C);
     float b = PVector.dist(C, A);
     float c = PVector.dist(A, B);
